@@ -1,17 +1,6 @@
-/**
- * The Zeffit is a character whose purpose is to attack Groks and eliminate them.
- * When Zeffits take a hit, they turn green.  When they take a second hit, Zeffits turn blue.
- * When they take a third hit, Zeffits turn red.  The fourth hit makes them explode in a fiery
- * death!
- *
- * @author (you)
- * @version (a version number or a date)
- */
 public class Zeffit
 {
-    // TODO: add final variables
-
-    // TODO: add instance variable(s)
+    private static int HITS_TAKEN;
 
     /**
      * Constructor for objects of class Zeffit
@@ -19,6 +8,7 @@ public class Zeffit
     public Zeffit()
     {
         // TODO: initialize instance variable(s)
+        HITS_TAKEN = 0;
     }
 
     /**
@@ -27,7 +17,7 @@ public class Zeffit
      */
     public void takesHit()
     {
-        // TODO: replace this line with your code
+        HITS_TAKEN += 1;
     }
 
     /**
@@ -37,7 +27,11 @@ public class Zeffit
      */
     public boolean isHitFree()
     {
-        // TODO: replace this line with your code
+        if (HITS_TAKEN == 0){
+            return true;
+        }else{
+            return false;
+        }
     }
 
     /**
@@ -47,7 +41,11 @@ public class Zeffit
      */
     public boolean isGreen()
     {
-        // TODO: replace this line with your code
+        if (HITS_TAKEN == 1){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
@@ -57,7 +55,11 @@ public class Zeffit
      */
     public boolean isBlue()
     {
-        // TODO: replace this line with your code
+        if (HITS_TAKEN == 2){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
@@ -67,7 +69,11 @@ public class Zeffit
      */
     public boolean isRed()
     {
-        // TODO: replace this line with your code
+        if (HITS_TAKEN == 3){
+            return true;
+        }else {
+            return false;
+        }
     }
 
     /**
@@ -77,7 +83,11 @@ public class Zeffit
      */
     public boolean isDead()
     {
-        // TODO: replace this line with your code
+        if (HITS_TAKEN == 4){
+            return true;
+        }else {
+            return false;
+        }
     }
 }
 
